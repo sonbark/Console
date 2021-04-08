@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Консоль руководителя</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_nav_drawer">NavDrawerActivity</string>
+    <string name="nav_header_title">Консоль руководителя</string>
+    <string name="nav_header_subtitle">Меню</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Настройки</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+
+    <string name="welcome">"Добро пожаловать, "</string>
+    <string name="welcomeStr">Добро пожаловть в консоль руководителя!</string>
+    <string name="serverStr">Сервер</string>
+    <string name="settingsStr">Настройки подключения</string>
+    <string name="loginStr">Логин</string>
+    <string name="passwordStr">Пароль</string>
+    <string name="enterButton">Войти</string>
+
+
+    <string name="rest_money">Остатки денежных средств</string>
+    <string name="invoice_buyer">Счета покупателям</string>
+    <string name="money_orders">Платежные поручения</string>
+    <string name="score_debit_credit">Задолженность Дт/Кт</string>
+    <string name="settings">Настройки</string>
+    <string name="about_app">О программе</string>
+    <string name="contacts">Контакты</string>
+    <string name="info">Информация</string>
+
+    <string name="_16591_rub">16591 RUB</string>
+</resources>
