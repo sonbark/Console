@@ -4,25 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:paddingHorizontal="16dp">
 
     <TextView
         android:id="@+id/header_rest_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/rest_money"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12" />
+        app:layout_constraintVertical_bias="0.2"/>
 
     <TextView
         android:id="@+id/todayView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="16sp"
+        android:text="@string/_08_04_2021"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -40,4 +43,71 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/todayView"
         app:layout_constraintVertical_bias="0.05"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/myMiddleColor"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@id/rest_data"
+        app:layout_constraintBottom_toTopOf="@id/header_score"/>
+
+    <TextView
+        android:id="@+id/header_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/debt"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_score"
+        app:layout_constraintVertical_bias="0.17"
+        android:paddingHorizontal="34dp"
+        >
+
+        <TableRow
+            android:layout_marginBottom="16dp"
+            >
+
+            <TextView
+                android:layout_width="150dp"
+                android:text="@string/dt"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:gravity="center"/>
+            <TextView
+                android:text="@string/ct"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:gravity="center"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/debetView"
+                android:text="@string/_54123_rub"
+                android:textSize="24sp"
+                android:layout_weight="0.5"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/creditView"
+                android:layout_weight="0.5"
+                android:text="@string/_102_rub"
+                android:textSize="24sp"
+                android:gravity="center"/>
+        </TableRow>
+
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

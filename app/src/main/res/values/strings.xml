@@ -9,14 +9,12 @@
     <string name="action_settings">Настройки</string>
 
 
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Главная</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="home_second">Home Second</string>
 
-
-    <string name="welcome">"Добро пожаловать, "</string>
     <string name="welcomeStr">Добро пожаловть в консоль руководителя!</string>
     <string name="serverStr">Сервер</string>
     <string name="settingsStr">Настройки подключения</string>
@@ -35,4 +33,10 @@
     <string name="info">Информация</string>
 
     <string name="_16591_rub">16591 RUB</string>
+    <string name="debt">Задолженность</string>
+    <string name="_08_04_2021">08.04.2021</string>
+    <string name="dt">Дт</string>
+    <string name="ct">Кт</string>
+    <string name="_54123_rub">54123 RUB</string>
+    <string name="_102_rub">102 RUB</string>
 </resources>
