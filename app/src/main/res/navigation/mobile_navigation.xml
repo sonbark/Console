@@ -27,26 +27,26 @@
             app:argType="string" />
         <action
             android:id="@+id/action_nav_home_second_to_nav_gallery3"
-            app:destination="@id/nav_rest" />
+            app:destination="@id/nav_invoice" />
         <action
             android:id="@+id/action_nav_home_second_to_nav_slideshow"
-            app:destination="@id/nav_invoice_buyer" />
+            app:destination="@id/nav_orders" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_rest"
+        android:id="@+id/nav_invoice"
         android:name="com.banzaraktsaeva.console.ui.gallery.GalleryFragment"
-        android:label="@string/rest_money"
-        tools:layout="@layout/fragment_gallery" >
+        android:label="@string/invoice_buyer"
+        tools:layout="@layout/fragment_gallery">
         <action
             android:id="@+id/action_nav_gallery_to_nav_home_second2"
             app:destination="@id/nav_home_second" />
     </fragment>
 
     <fragment
-        android:id="@+id/nav_invoice_buyer"
+        android:id="@+id/nav_orders"
         android:name="com.banzaraktsaeva.console.ui.slideshow.SlideshowFragment"
-        android:label="@string/invoice_buyer"
+        android:label="@string/money_orders"
         tools:layout="@layout/fragment_slideshow">
         <action
             android:id="@+id/action_nav_slideshow_to_nav_home_second"

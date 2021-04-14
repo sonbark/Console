@@ -40,4 +40,5 @@
     <string name="_54123_rub">54123 RUB</string>
     <string name="_102_rub">102 RUB</string>
     <string name="buyer1">Контрагент</string>
+    <string name="status">Статус платежного поручения</string>
 </resources>
