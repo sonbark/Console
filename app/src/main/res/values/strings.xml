@@ -41,4 +41,8 @@
     <string name="_102_rub">102 RUB</string>
     <string name="buyer1">Контрагент</string>
     <string name="status">Статус платежного поручения</string>
+    <string name="date_str">Дата</string>
+    <string name="input_date">Введите дату</string>
+    <string name="todayHeader">Сегодня</string>
+    <string name="to_choose">Выбрать</string>
 </resources>

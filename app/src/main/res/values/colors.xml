@@ -9,5 +9,6 @@
     <color name="myDarkColor">#002C54</color>
     <color name="myMiddleColor">#EFB509</color>
     <color name="myLightColor">#D0E1F9</color>
+    <color name="fafafa">#fafafa</color>
     <color name="white">#eeeeee</color>
 </resources>

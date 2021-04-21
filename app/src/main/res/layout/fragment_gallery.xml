@@ -4,9 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.gallery.GalleryFragment"
+    android:paddingHorizontal="26dp"
     android:paddingVertical="16dp"
-    android:paddingHorizontal="26dp">
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03">
+
+        <EditText
+            android:id="@+id/dateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:layout_weight="0.8"
+            android:hint="@string/input_date"
+            android:shadowColor="@color/myMiddleColor"
+            android:textColorHint="@color/myDarkColor"
+            android:foregroundTint="@color/myLightColor"/>
+        <Button
+            android:text="@string/to_choose"
+            android:layout_weight="0.2"
+            android:onClick="getInvoices"
+            android:backgroundTint="@color/myMiddleColor"
+            android:layout_gravity="end"
+
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
@@ -15,9 +49,11 @@
 
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"/>
+        app:layout_constraintTop_toBottomOf="@id/filterLayout"
+        android:layout_marginTop="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

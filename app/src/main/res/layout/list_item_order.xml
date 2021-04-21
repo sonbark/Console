@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:text="@string/_08_04_2021"
         android:textColor="@color/myDarkColor"
-        android:textSize="24sp"/>
+        android:textSize="18sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:textSize="20sp"
+            android:textSize="16sp"
             android:textColor="@color/myDarkColor"
             android:text="@string/buyer1"/>
         <TextView
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:gravity="end"
-            android:textSize="22sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:text="@string/_16591_rub"
             android:textColor="@color/myMiddleColor"/>
