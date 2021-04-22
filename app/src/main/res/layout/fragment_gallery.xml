@@ -30,9 +30,10 @@
             android:textColorHint="@color/myDarkColor"
             android:foregroundTint="@color/myLightColor"/>
         <Button
+            android:id="@+id/getDataBtn"
             android:text="@string/to_choose"
             android:layout_weight="0.2"
-            android:onClick="getInvoices"
+
             android:backgroundTint="@color/myMiddleColor"
             android:layout_gravity="end"
 

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,7 +19,15 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.banzaraktsaeva.console.R;
+
+import org.json.JSONArray;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -85,6 +94,27 @@ public class GalleryFragment extends Fragment {
                 }
             };
 
+        /*Button invoicesBtn = root.findViewById(R.id.getDataBtn);
+        invoicesBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RequestQueue queue = Volley.newRequestQueue(this.getActivity());
+                String url ="http://192.168.245.54/banzaraksaeva/ru_RU/hs/TAPI/V1/Metod3";
+                JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        Toast.makeText(getContext(), response.toString(), Toast.LENGTH_LONG).show();
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getContext(), "Запрос на другой веб-сервис", Toast.LENGTH_LONG).show();
+                    }
+                });
+
+                queue.add(request);
+            }
+        });*/
 
         return root;
     }
@@ -105,8 +135,24 @@ public class GalleryFragment extends Fragment {
     }
 
     public void getInvoices(View view){
-        Toast.makeText(getContext(), "U just got ur invoice list", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getContext(), "U just got ur invoice list", Toast.LENGTH_LONG).show();
 
+        // Instantiate the RequestQueue.
+//        RequestQueue queue = Volley.newRequestQueue(this.requireContext());
+//        String url ="http://192.168.245.54/banzaraksaeva/ru_RU/hs/TAPI/V1/Metod3";
+//        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+//            @Override
+//            public void onResponse(JSONArray response) {
+//                Toast.makeText(getContext(), response.toString(), Toast.LENGTH_LONG).show();
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                Toast.makeText(getContext(), "Запрос на другой веб-сервис", Toast.LENGTH_LONG).show();
+//            }
+//        });
+//
+//        queue.add(request);
         /*
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override

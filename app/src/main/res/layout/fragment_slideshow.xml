@@ -8,6 +8,40 @@
     android:paddingVertical="16dp"
     android:paddingHorizontal="26dp">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03">
+
+        <EditText
+            android:id="@+id/dateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:layout_weight="0.8"
+            android:hint="@string/input_date"
+            android:shadowColor="@color/myMiddleColor"
+            android:textColorHint="@color/myDarkColor"
+            android:foregroundTint="@color/myLightColor"/>
+        <Button
+            android:id="@+id/getDataBtn"
+            android:text="@string/to_choose"
+            android:layout_weight="0.2"
+
+            android:backgroundTint="@color/myMiddleColor"
+            android:layout_gravity="end"
+
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="0dp"
@@ -17,7 +51,7 @@
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filterLayout"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.1"/>
+        android:layout_marginTop="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

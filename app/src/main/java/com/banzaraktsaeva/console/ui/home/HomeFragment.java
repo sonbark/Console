@@ -70,7 +70,7 @@ public class HomeFragment extends Fragment {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getContext(), "JSONArray made me worry", Toast.LENGTH_LONG).show();
+                Toast.makeText(getContext(), "Запрос на веб-сервис", Toast.LENGTH_LONG).show();
             }
         });
 

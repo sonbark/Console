@@ -88,11 +88,11 @@ public class LoginActivity extends AppCompatActivity {
         String login = loginEditText.getText().toString();
         String password = passwordEditText.getText().toString();
 
-        //if ((server.equals("s1")) && (login.equals("l1@mail.ru")) && (password.equals("QWERTY"))) {
+        if ((server.equals("s1")) && (login.equals("l1@mail.ru")) && (password.equals("QWERTY"))) {
         Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(loginIntent);
-           /*}else {
+           }else {
                 Toast.makeText(LoginActivity.this, "Неверно введённые данные", Toast.LENGTH_SHORT).show();
-           }*/
+           }
     }
 }
