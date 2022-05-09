@@ -79,7 +79,7 @@
                 android:layout_gravity="center"
                 android:text="@string/_16591_rub"
 
-                android:textColor="@color/myMiddleColor"
+                android:textColor="@color/myYellowColor"
                 android:textSize="34sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -98,7 +98,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/myLightColor"
+            android:background="@color/myDarkColor"
             android:orientation="vertical"
             android:paddingHorizontal="24dp"
             android:paddingVertical="16dp">
@@ -125,7 +125,7 @@
                         android:layout_width="55dp"
                         android:layout_weight="0.3"
                         android:gravity="center"
-                        android:text="@string/dt"
+                        android:text="Покупателей"
                         android:textColor="@color/myDarkColor"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -135,7 +135,7 @@
                         android:layout_weight="0.3"
                         android:gravity="center"
                         android:text="@string/_54123_rub"
-                        android:textColor="@color/myMiddleColor"
+                        android:textColor="@color/myYellowColor"
                         android:textSize="24sp" />
                 </TableRow>
 
@@ -144,7 +144,7 @@
                     <TextView
                         android:layout_weight="0.7"
                         android:gravity="center"
-                        android:text="@string/ct"
+                        android:text="Поставщикам"
                         android:textColor="@color/myDarkColor"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -154,7 +154,7 @@
                         android:layout_weight="0.7"
                         android:gravity="center"
                         android:text="@string/_102_rub"
-                        android:textColor="@color/myMiddleColor"
+                        android:textColor="@color/myYellowColor"
                         android:textSize="24sp" />
                 </TableRow>
             </TableLayout>

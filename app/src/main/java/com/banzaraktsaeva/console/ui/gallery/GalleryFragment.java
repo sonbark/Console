@@ -37,14 +37,9 @@ import java.util.Objects;
 public class GalleryFragment extends Fragment {
 
     private ArrayList<Invoice> invoices = new ArrayList<>();
-
     private RecyclerView recyclerView;
-
-    //private DatePicker datePicker;
-
     private TextView dateView;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
-
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -54,11 +49,6 @@ public class GalleryFragment extends Fragment {
         recyclerView = root.findViewById(R.id.list);
         InvoiceAdapter adapter = new InvoiceAdapter(this.requireContext(), invoices);
         recyclerView.setAdapter(adapter);
-
-        /*datePicker = root.findViewById(R.id.datePicker);
-        long today = System.currentTimeMillis()/1000;
-        datePicker.setMinDate(today);*/
-
 
         dateView = root.findViewById(R.id.dateView);
         dateView.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +62,6 @@ public class GalleryFragment extends Fragment {
 
                 DatePickerDialog dialog = new DatePickerDialog(requireContext(),
                         android.R.style.Theme_Material_Dialog_MinWidth, mDateSetListener, year, month, day);
-                //Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 Objects.requireNonNull(dialog.getWindow()).setColorMode(ActivityInfo.COLOR_MODE_DEFAULT);
                 dialog.show();
             }
@@ -94,28 +83,6 @@ public class GalleryFragment extends Fragment {
                 }
             };
 
-        /*Button invoicesBtn = root.findViewById(R.id.getDataBtn);
-        invoicesBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RequestQueue queue = Volley.newRequestQueue(this.getActivity());
-                String url ="http://192.168.245.54/banzaraksaeva/ru_RU/hs/TAPI/V1/Metod3";
-                JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        Toast.makeText(getContext(), response.toString(), Toast.LENGTH_LONG).show();
-                    }
-                }, new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getContext(), "Запрос на другой веб-сервис", Toast.LENGTH_LONG).show();
-                    }
-                });
-
-                queue.add(request);
-            }
-        });*/
-
         return root;
     }
 
@@ -135,24 +102,21 @@ public class GalleryFragment extends Fragment {
     }
 
     public void getInvoices(View view){
-        //Toast.makeText(getContext(), "U just got ur invoice list", Toast.LENGTH_LONG).show();
-
         // Instantiate the RequestQueue.
-//        RequestQueue queue = Volley.newRequestQueue(this.requireContext());
-//        String url ="http://192.168.245.54/banzaraksaeva/ru_RU/hs/TAPI/V1/Metod3";
-//        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
-//            @Override
-//            public void onResponse(JSONArray response) {
-//                Toast.makeText(getContext(), response.toString(), Toast.LENGTH_LONG).show();
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                Toast.makeText(getContext(), "Запрос на другой веб-сервис", Toast.LENGTH_LONG).show();
-//            }
-//        });
-//
-//        queue.add(request);
+        RequestQueue queue = Volley.newRequestQueue(this.requireContext());
+        String url ="http://192.168.245.54/banzaraksaeva/ru_RU/hs/TAPI/V1/Metod3";
+        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                Toast.makeText(getContext(), response.toString(), Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getContext(), "Запрос на другой веб-сервис", Toast.LENGTH_LONG).show();
+            }
+        });
+        queue.add(request);
         /*
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override

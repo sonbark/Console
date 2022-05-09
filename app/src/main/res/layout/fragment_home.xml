@@ -1,84 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fafafa"
+    android:background="@color/myBlackColor"
     android:paddingHorizontal="26dp"
     tools:context=".ui.home.HomeFragment">
-
-    <!--TextView
-        android:id="@+id/todayHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/todayHeader"
-        android:textColor="@color/myDarkColor"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" /-->
 
     <TextClock
         android:id="@+id/textClockView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:textColor="@color/myDarkColor"
+        android:textColor="@color/myWhiteColor"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
+        android:layout_gravity="center"
 
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="64dp"
         android:format12Hour="dd MMMM yyyy, EEEE"
         android:format24Hour="dd MMMM yyyy, EEEE"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="36dp"
+        android:layout_height="0.2dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/myLightColor"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/todayStr"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/myWhiteColor"
+        android:textSize="14sp"/>
 
     <androidx.cardview.widget.CardView
         android:id="@id/card1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="4pt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/textClockView"
-        app:layout_constraintVertical_bias="0.2">
+        android:layout_height="165dp"
+        android:layout_marginTop="42dp"
+        app:cardCornerRadius="4pt">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
+            android:background="@color/myDarkColor"
             android:orientation="vertical"
-            android:paddingHorizontal="16dp"
+            android:paddingHorizontal="32dp"
+
             android:paddingVertical="16dp">
 
             <TextView
                 android:id="@+id/header_rest_data"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginVertical="14dp"
+                android:layout_marginTop="14dp"
                 android:text="@string/rest_money"
-                android:textColor="@color/myBlackColor"
+                android:textColor="@color/myWhiteColor"
                 android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="51 "
+                    android:textColor="#a9a9a9"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="на расчетных счетах"
+                    android:textColor="@color/myWhiteColor"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/rest_data"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:text="@string/_16591_rub"
 
-                android:textColor="@color/myMiddleColor"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/myYellowColor"
                 android:textSize="34sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -86,77 +102,110 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card1"
-        app:layout_constraintVertical_bias="0.2">
+        android:layout_height="326dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="48dp"
+        app:cardBackgroundColor="@color/myDarkColor"
+        app:cardCornerRadius="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:orientation="vertical"
-            android:paddingHorizontal="16dp"
+            android:paddingHorizontal="32dp"
+
             android:paddingVertical="16dp">
 
             <TextView
                 android:id="@+id/header_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginVertical="16dp"
+                android:layout_marginTop="14dp"
                 android:text="@string/debt"
-                android:textColor="@color/myBlackColor"
+                android:textColor="@color/myWhiteColor"
                 android:textSize="20sp" />
 
             <TableLayout
                 android:id="@+id/card1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="34dp">
+                android:layout_marginTop="16dp"
+                >
 
-                <TableRow android:layout_marginBottom="16dp">
+                <TableRow android:layout_marginVertical="16dp"
+                    android:layout_width="match_parent">
 
-                    <TextView
-                        android:layout_width="55dp"
-                        android:layout_weight="0.3"
-                        android:gravity="center"
-                        android:text="@string/dt"
-                        android:textColor="@color/myDarkColor"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical"
+
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="62 "
+                            android:textColor="#a9a9a9"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Дебиторская"
+                            android:textColor="@color/myWhiteColor"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
 
                     <TextView
                         android:id="@+id/debetView"
-                        android:layout_weight="0.3"
-                        android:gravity="center"
+                        android:layout_gravity="end"
                         android:text="@string/_54123_rub"
-                        android:textColor="@color/myMiddleColor"
+                        android:textColor="@color/myYellowColor"
                         android:textSize="24sp" />
                 </TableRow>
 
-                <TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:background="@color/myLightColor" />
 
-                    <TextView
-                        android:layout_weight="0.7"
-                        android:gravity="center"
-                        android:text="@string/ct"
-                        android:textColor="@color/myDarkColor"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                <TableRow android:layout_marginTop="16dp"
+                    android:layout_marginBottom="36dp"
+                    android:layout_width="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="60 "
+                            android:textColor="#a9a9a9"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Кредиторская"
+                            android:textColor="@color/myWhiteColor"
+                            android:textSize="14sp" />
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/creditView"
-                        android:layout_weight="0.7"
-                        android:gravity="center"
                         android:text="@string/_102_rub"
-                        android:textColor="@color/myMiddleColor"
+                        android:layout_gravity="center"
+                        android:textColor="@color/myYellowColor"
                         android:textSize="24sp" />
                 </TableRow>
             </TableLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

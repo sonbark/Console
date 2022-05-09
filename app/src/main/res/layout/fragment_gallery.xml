@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:paddingHorizontal="26dp"
     android:paddingVertical="16dp"
+    android:background="@color/myBlackColor"
     tools:context=".ui.gallery.GalleryFragment">
 
     <LinearLayout
@@ -26,15 +27,16 @@
             android:gravity="top"
             android:layout_weight="0.8"
             android:hint="@string/input_date"
-            android:shadowColor="@color/myMiddleColor"
-            android:textColorHint="@color/myDarkColor"
-            android:foregroundTint="@color/myLightColor"/>
+            android:shadowColor="@color/myLightColor"
+            android:textColorHint="@color/myWhiteColor"
+            android:textColor="@color/myWhiteColor"
+            />
         <Button
             android:id="@+id/getDataBtn"
             android:text="@string/to_choose"
             android:layout_weight="0.2"
 
-            android:backgroundTint="@color/myMiddleColor"
+            android:backgroundTint="@color/myYellowColor"
             android:layout_gravity="end"
 
             android:layout_height="wrap_content"

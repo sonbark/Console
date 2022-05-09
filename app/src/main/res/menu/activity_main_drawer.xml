@@ -22,8 +22,8 @@
             android:id="@+id/nav_score"
             android:title="@string/score_debit_credit" /-->
         <item
-            android:id="@+id/naz_rest"
-            android:title="@string/rest_money" />
+            android:id="@+id/backlogFragment"
+            android:title="@string/backlogStr" />
         <item
             android:title="@string/info">
             <menu>

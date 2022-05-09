@@ -45,4 +45,6 @@
     <string name="input_date">Введите дату</string>
     <string name="todayHeader">Сегодня</string>
     <string name="to_choose">Выбрать</string>
+    <string name="backlogStr">Задолженности: Дт/Кт</string>
+    <string name="todayStr">Сегодня</string>
 </resources>

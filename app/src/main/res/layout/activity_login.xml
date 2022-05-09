@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/settingsStr"
-            android:textColor="@color/myDarkColor"
+            android:textColor="@color/myWhiteColor"
             android:textSize="24sp" />
 
         <EditText
@@ -37,8 +37,8 @@
             android:hint="@string/serverStr"
             android:imeOptions="actionNext"
             android:inputType="textNoSuggestions"
-            android:textColor="@color/myBlackColor"
-            android:textColorHint="@color/myBlackColor"
+            android:textColor="@color/myWhiteColor"
+            android:textColorHint="@color/myLightColor"
             android:textSize="18sp"
             android:autofillHints="no" />
 
@@ -51,8 +51,8 @@
             android:hint="@string/loginStr"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
-            android:textColor="@color/myBlackColor"
-            android:textColorHint="@color/myBlackColor"
+            android:textColor="@color/myWhiteColor"
+            android:textColorHint="@color/myLightColor"
             android:autofillHints="email"
             android:textSize="18sp" />
 
@@ -65,8 +65,8 @@
             android:hint="@string/passwordStr"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
-            android:textColor="@color/myBlackColor"
-            android:textColorHint="@color/myBlackColor"
+            android:textColor="@color/myWhiteColor"
+            android:textColorHint="@color/myLightColor"
             android:autofillHints="password"
             android:textSize="18sp" />
 
@@ -75,7 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/myMiddleColor"
+            android:background="@color/myYellowColor"
             android:onClick="enter"
             android:shadowRadius="5"
             android:text="@string/enterButton" />

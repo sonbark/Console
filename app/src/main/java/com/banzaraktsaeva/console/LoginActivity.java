@@ -1,14 +1,12 @@
 package com.banzaraktsaeva.console;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.Navigation;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -46,8 +44,6 @@ public class LoginActivity extends AppCompatActivity {
         loginEditText.addTextChangedListener(new TextWatcher(){
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count){
-                // действия, когда вводится какой то текст
-                // s - то, что вводится, для преобразования в строку - s.toString()
             }
 
             @Override
@@ -55,8 +51,6 @@ public class LoginActivity extends AppCompatActivity {
                 if (editable.length() == 0){ loginEditText.setError("Введите логин");}
                 else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(editable).matches()){
                     loginEditText.setError("Логин должен быть в формате email");}
-                // действия после того, как что то введено
-                // editable - то, что введено. В строку - editable.toString()
             }
 
             @Override
@@ -79,7 +73,6 @@ public class LoginActivity extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 if (after == 0){ passwordEditText.setError("Введите пароль");}
             }
-
         });
     }
 
@@ -96,3 +89,4 @@ public class LoginActivity extends AppCompatActivity {
            }
     }
 }
+

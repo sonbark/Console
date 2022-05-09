@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,12 +19,22 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.banzaraktsaeva.console.R;
 import com.banzaraktsaeva.console.ui.gallery.Invoice;
 import com.banzaraktsaeva.console.ui.gallery.InvoiceAdapter;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Objects;
 
 public class SlideshowFragment extends Fragment {
@@ -32,6 +43,7 @@ public class SlideshowFragment extends Fragment {
     private RecyclerView recyclerView;
     private TextView dateView;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
+    private String date = "";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -64,7 +76,7 @@ public class SlideshowFragment extends Fragment {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 month = month + 1;
-                String date = "";
+
                 if (day>=10 && month>=10){
                     date = day + "." + month + "." + year;
                 } else if (month<10){
@@ -75,6 +87,11 @@ public class SlideshowFragment extends Fragment {
                 dateView.setText(date);
             }
         };
+
+
+
+
+
 
         return root;
     }
@@ -91,5 +108,41 @@ public class SlideshowFragment extends Fragment {
         orders.add(new Order("05.03.2021", "Рога и копыта", false, 65400));
 
         Order.sortListBy(orders);
+    }
+
+    public void getOrders(View view, String date){
+
+        // Instantiate the RequestQueue.
+        RequestQueue queue = Volley.newRequestQueue(this.requireContext());
+        String url ="https://185.62.194.22/banzaraksaeva/ru/hs/TAPI/V1/Metod2";
+
+        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                try {
+                    JSONArray invoiceArray = response.getJSONArray(0);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+//                String invoice = "";
+//                try {
+//                    JSONObject invoiceObject = response.getJSONObject(0);
+//                    invoice = invoiceObject.getString("");
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+                Toast.makeText(getContext(), response.toString(), Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getContext(), "no2", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        queue.add(request);
+
     }
 }
